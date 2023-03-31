@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Definir o nome do usuário e o nome do repositório a duas variavéis no codigo
+username="SheepN0tF0und"   # Altere aqui o nome do dono do repositório que onde deseja baixar o repositório
+reponame="InstaladorTDI"   # Altere aqui o nome do repositorio que deseja baixar
+
+
+# Faz a verificação se esse diretorio/repositório ja existe.
+if [ -d "$reponame" ]; then
+    echo -e "\e[92mRepositório requerido já instalado.\e[0m"
+  else 
+
+# Clonar o repositório
+      git clone https://github.com/$username/$reponame
+fi
